@@ -1,7 +1,7 @@
 install-nginx-master-all-modules
 ================================
 
-This module installs nginx and complementary modules
+This module compile latest nginx version and complementary modules
 
 
 ## Installation
