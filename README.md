@@ -6,11 +6,9 @@ This module compile latest nginx version and complementary modules
 
 ## Installation
 
+    cd /usr/local/src
     yum groupinstall "Development Tools"
     yum install gcc gcc-c++ kernel-devel
-
-
-    cd /usr/local/src
     yum groupinstall “Development Tools”
     yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel
     
@@ -35,6 +33,9 @@ This module compile latest nginx version and complementary modules
     make install
     lua
     ln -sf luajit-2.0.0-beta10 /usr/local/bin/luajit
+    export LUA_LIB=/usr/local/lib/
+    export LUA_INC=/usr/local/include/luajit-2.0/
+    ln -s /usr/local/lib/libluajit-5.1.so.2.0.0 /usr/local/lib/liblua.so
     
 ##Install MaxMind C API
 Type the following commands to install MaxMind C API:
@@ -66,17 +67,18 @@ Run ldconfig to activate configuration:
 
     cd usr/local/src/nginx/nginx-master
     git clone --depth 1 https://github.com/nginx/nginx
+    
+Download latest master-nginx-module
+
     cd usr/local/src/nginx-master/nginx
+    git pull
 
 ## Download memc-nginx-module
 
     cd /usr/local/src/nginx-master/nginx-modules
     git clone --depth 1 https://github.com/agentzh/memc-nginx-module
-    
-    
-export LUA_LIB=/usr/local/lib/
-export LUA_INC=/usr/local/include/luajit-2.0/
-ln -s /usr/local/lib/libluajit-5.1.so.2.0.0 /usr/local/lib/liblua.so
+    cd /usr/local/src/nginx-master/nginx-modules/memc-nginx-module
+    git pull
 
 ## Download nginx-rtmp-module
 
