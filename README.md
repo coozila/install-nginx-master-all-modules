@@ -176,7 +176,7 @@ lua-nginx-module-master
     --without-mail_imap_module \
     --without-mail_smtp_module \
     --with-mail_ssl_module \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module-master \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module-master \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx-cache-purge \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit-master \
