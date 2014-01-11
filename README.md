@@ -1,4 +1,4 @@
-install-nginx-master-all-modules
+compile-nginx-master-all-modules
 ================================
 
 This module compile latest nginx version and complementary modules
