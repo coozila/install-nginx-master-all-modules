@@ -184,9 +184,10 @@ lua-nginx-module-master
     --without-mail_imap_module \
     --without-mail_smtp_module \
     --with-mail_ssl_module \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/memc-nginx-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module
+    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit
     make
     make install
