@@ -4,13 +4,15 @@ install-nginx-master-all-modules
 This module installs nginx and complementary modules
 
 
-yum groupinstall "Development Tools"
-yum install gcc gcc-c++ kernel-devel
+## Installation
+
+    yum groupinstall "Development Tools"
+    yum install gcc gcc-c++ kernel-devel
 
 
-cd /usr/local/src
-yum groupinstall “Development Tools”
-yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel
+    cd /usr/local/src
+    yum groupinstall “Development Tools”
+    yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel
 
 wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.34.tar.gz
 tar -xzvf pcre-8.34.tar.gz
@@ -44,6 +46,11 @@ git clone --depth 1 https://github.com/arut/nginx-rtmp-module
 cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
 git pull
 
+
+cd /usr/local/src/nginx-master/nginx-modules/
+git clone --depth 1 https://github.com/arut/nginx-rtmp-module
+cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
+git pull
 
 
 
