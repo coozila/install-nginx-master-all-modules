@@ -125,6 +125,7 @@ ngx-cache-purge
 
 lua-nginx-module-master
 
+    cd /usr/local/src//nginx-master/nginx
     ./configure \
     --prefix=/etc/nginx \
     --conf-path=/etc/nginx/nginx.conf \
