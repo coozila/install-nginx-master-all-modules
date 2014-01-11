@@ -63,7 +63,7 @@ Run ldconfig to activate configuration:
     mkdir /usr/local/src/nginx-master
     mkdir /usr/local/src/nginx-master/nginx-modules
     
-## Download latest nginx-master
+## Git latest nginx-master
 
     cd /usr/local/src/nginx-master
     git clone --depth 1 https://github.com/nginx/nginx
@@ -73,7 +73,7 @@ Update nginx-master
     cd /usr/local/src/nginx-master/nginx
     git pull
 
-## Download memc-nginx-module
+## Git memc-nginx-module
 
     cd /usr/local/src/nginx-master/nginx-modules
     git clone --depth 1 https://github.com/agentzh/memc-nginx-module
@@ -83,7 +83,7 @@ Update memc-nginx-module
     cd /usr/local/src/nginx-master/nginx-modules/memc-nginx-module
     git pull
 
-## Download nginx-rtmp-module
+## Git nginx-rtmp-module
 
     cd /usr/local/src/nginx-master/nginx-modules/
     git clone --depth 1 https://github.com/arut/nginx-rtmp-module
@@ -93,7 +93,7 @@ Update nginx-rtmp-module
     cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
     git pull
 
-## Download ngx_devel_kit
+## Git ngx_devel_kit
 
     cd /usr/local/src/nginx-master/nginx-modules
     git clone --depth 1 https://github.com/simpl/ngx_devel_kit
@@ -103,9 +103,7 @@ Update ngx_devel_kit
     cd /usr/local/src/nginx-master/nginx-modules/ngx_devel_kit
     git pull
 
-
-
-## Download nginx-upload-progress-module
+## Git nginx-upload-progress-module
 
     cd /usr/local/src/nginx-master/nginx-modules
     git clone --depth 1 https://github.com/masterzen/nginx-upload-progress-module
@@ -113,6 +111,16 @@ Update ngx_devel_kit
 Update nginx-upload-progress-module
 
     cd /usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module
+    git pull
+
+## Git lua-nginx-module
+
+    cd /usr/local/src/nginx-master/nginx-modules
+    git clone --depth 1 https://github.com/chaoslawful/lua-nginx-module
+    
+Update lua-nginx-module
+
+    cd /usr/local/src/nginx-master/nginx-modules/lua-nginx-module
     git pull
 
 ## Compile Nginx with :
@@ -177,9 +185,9 @@ lua-nginx-module-master
     --without-mail_smtp_module \
     --with-mail_ssl_module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module-master \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx-cache-purge \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit-master \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit \
     --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module-master
     make
     make install
