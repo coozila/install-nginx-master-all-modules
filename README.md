@@ -63,7 +63,7 @@ Run ldconfig to activate configuration:
     mkdir /usr/local/src/nginx-master
     mkdir /usr/local/src/nginx-master/nginx-modules
     
-## Download latest master-nginx-module
+## Download latest nginx-master
 
     cd /usr/local/src/nginx-master
     git clone --depth 1 https://github.com/nginx/nginx
@@ -89,12 +89,31 @@ Update memc-nginx-module
     git clone --depth 1 https://github.com/arut/nginx-rtmp-module
     
 Update nginx-rtmp-module
-    
+
     cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
+    git pull
+
+## Download ngx_devel_kit
+
+    cd /usr/local/src/nginx-master/nginx-modules
+    git clone --depth 1 https://github.com/simpl/ngx_devel_kit
+    
+Update ngx_devel_kit
+
+    cd /usr/local/src/nginx-master/nginx-modules/ngx_devel_kit
     git pull
 
 
 
+## Download nginx-upload-progress-module
+
+    cd /usr/local/src/nginx-master/nginx-modules
+    git clone --depth 1 https://github.com/masterzen/nginx-upload-progress-module
+    
+Update nginx-upload-progress-module
+
+    cd /usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module
+    git pull
 
 ## Compile Nginx with :
 nginx-upload-progress-module-master
