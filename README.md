@@ -40,7 +40,7 @@ This module compile latest nginx version and complementary modules
 ##Install MaxMind C API
 Type the following commands to install MaxMind C API:
 
-    cd ~/src
+    cd /usr/local/src
     wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
     tar -zxvf GeoIP.tar.gz
     cd GeoIP-1.4.8
