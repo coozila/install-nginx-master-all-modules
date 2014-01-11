@@ -39,12 +39,19 @@ export LUA_LIB=/usr/local/lib/
 export LUA_INC=/usr/local/include/luajit-2.0/
 ln -s /usr/local/lib/libluajit-5.1.so.2.0.0 /usr/local/lib/liblua.so
 
-cd /usr/local/src/nginx
+cd /usr/local/src/nginx-master/nginx-modules/
 git clone --depth 1 https://github.com/arut/nginx-rtmp-module
+cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
+git pull
 
-cd ~/src/nginx-master
+
+
+
+cd usr/local/src/nginx/nginx-master
 git clone --depth 1 https://github.com/nginx/nginx
 cd ~/src/nginx-master/nginx
+
+
 
 ./configure \
 --prefix=/etc/nginx \
