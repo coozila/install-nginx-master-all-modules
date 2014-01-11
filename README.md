@@ -188,6 +188,6 @@ lua-nginx-module-master
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx-cache-purge \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module-master
+    --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module
     make
     make install
