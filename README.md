@@ -124,14 +124,15 @@ Update lua-nginx-module
     git pull
 
 ## Compile Nginx with :
+lua-nginx-module
 
-nginx-upload-progress-module-master
+memc-nginx-module
 
 nginx-rtmp-module-master
 
-ngx-cache-purge
+nginx-upload-progress-module-master
 
-lua-nginx-module-master
+ngx_devel_kit
 
     cd /usr/local/src//nginx-master/nginx
     ./configure \
