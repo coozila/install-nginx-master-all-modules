@@ -13,50 +13,80 @@ This module installs nginx and complementary modules
     cd /usr/local/src
     yum groupinstall “Development Tools”
     yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel
+    
+## Download latest Pcre 8.34
 
-wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.34.tar.gz
-tar -xzvf pcre-8.34.tar.gz
-cd pcre-8.34/
-./configure # /usr/local is the default so no need to prefix
-make
-sudo make install
-sudo ldconfig # this is important otherwise nginx will compile but fail to load
+    cd /usr/local/src
+    wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.34.tar.gz
+    tar -xzvf pcre-8.34.tar.gz
+    cd pcre-8.34/
+    ./configure # /usr/local is the default so no need to prefix
+    make
+    sudo make install
+    sudo ldconfig # this is important otherwise nginx will compile but fail to load
+    
+## Download latest stable Luajit
 
-cd /usr/local/src
-git clone http://luajit.org/git/luajit-2.0.git
-cd luajit-2.0/
-git pull
-make
-make install
-lua
-ln -sf luajit-2.0.0-beta10 /usr/local/bin/luajit
+    cd /usr/local/src
+    git clone http://luajit.org/git/luajit-2.0.git
+    cd luajit-2.0/
+    git pull
+    make
+    make install
+    lua
+    ln -sf luajit-2.0.0-beta10 /usr/local/bin/luajit
+    
+##Install MaxMind C API
+Type the following commands to install MaxMind C API:
 
-cd /usr/local/src
-mkdir /usr/local/src/nginx-master
-mkdir /usr/local/src/nginx-master/nginx-modules
-cd /usr/local/src/nginx-master/nginx-modules
-git clone --depth 1 https://github.com/agentzh/memc-nginx-module
+    cd ~/src
+    wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
+    tar -zxvf GeoIP.tar.gz
+    cd GeoIP-1.4.8
+    yum install zlib-devel
+    ./configure
+    make
+    make install
 
+You need to configure dynamic linker run time bindings as follows:
+
+    echo '/usr/local/lib' > /etc/ld.so.conf.d/geoip.conf
+
+Run ldconfig to activate configuration:
+
+    ldconfig
+    ldconfig -v | less
+
+## Create master nginx-master directory and nginx-modules
+
+    mkdir /usr/local/src/nginx-master
+    mkdir /usr/local/src/nginx-master/nginx-modules
+    
+## Download master-nginx-module
+
+    cd usr/local/src/nginx/nginx-master
+    git clone --depth 1 https://github.com/nginx/nginx
+    cd usr/local/src/nginx-master/nginx
+
+## Download memc-nginx-module
+
+    cd /usr/local/src/nginx-master/nginx-modules
+    git clone --depth 1 https://github.com/agentzh/memc-nginx-module
+    
+    
 export LUA_LIB=/usr/local/lib/
 export LUA_INC=/usr/local/include/luajit-2.0/
 ln -s /usr/local/lib/libluajit-5.1.so.2.0.0 /usr/local/lib/liblua.so
 
-cd /usr/local/src/nginx-master/nginx-modules/
-git clone --depth 1 https://github.com/arut/nginx-rtmp-module
-cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
-git pull
+## Download nginx-rtmp-module
 
-
-cd /usr/local/src/nginx-master/nginx-modules/
-git clone --depth 1 https://github.com/arut/nginx-rtmp-module
-cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
-git pull
+    cd /usr/local/src/nginx-master/nginx-modules/
+    git clone --depth 1 https://github.com/arut/nginx-rtmp-module
+    cd /usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module
+    git pull
 
 
 
-cd usr/local/src/nginx/nginx-master
-git clone --depth 1 https://github.com/nginx/nginx
-cd ~/src/nginx-master/nginx
 
 
 
