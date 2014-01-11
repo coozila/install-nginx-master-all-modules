@@ -116,10 +116,13 @@ Update nginx-upload-progress-module
     git pull
 
 ## Compile Nginx with :
+
 nginx-upload-progress-module-master
+
 nginx-rtmp-module-master
+
 ngx-cache-purge
-ngx_http_enhanced_memcached_module
+
 lua-nginx-module-master
 
     ./configure \
@@ -175,7 +178,6 @@ lua-nginx-module-master
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module-master \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module-master \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx-cache-purge \
-    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_http_enhanced_memcached_module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit-master \
     --add-module=/usr/local/src/nginx-master/nginx-modules/lua-nginx-module-master
     make
