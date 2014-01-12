@@ -123,7 +123,7 @@ Update lua-nginx-module
     cd /usr/local/src/nginx-master/nginx-modules/lua-nginx-module
     git pull
     
-## Git latest ngx_pagespeed
+## Git latest ngx_pagespeed https://github.com/pagespeed/ngx_pagespeed
 
     cd /usr/local/src/nginx-master/nginx-modules
     git clone --depth 1  https://github.com/pagespeed/ngx_pagespeed
