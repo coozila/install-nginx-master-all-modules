@@ -122,7 +122,20 @@ Update lua-nginx-module
 
     cd /usr/local/src/nginx-master/nginx-modules/lua-nginx-module
     git pull
+    
+## Git latest ngx_pagespeed
 
+    cd /usr/local/src/nginx-master/nginx-modules
+    git clone --depth 1  https://github.com/pagespeed/ngx_pagespeed
+    
+Update ngx_pagespeed
+
+    cd /usr/local/src/nginx-master/nginx-modules/ngx_pagespeed
+    git pull
+    wget https://dl.google.com/dl/page-speed/psol/1.7.30.2.tar.gz
+    tar -xzvf 1.7.30.2.tar.gz # expands to psol/
+
+  
 ## Compile Nginx with :
 lua-nginx-module
 
@@ -133,6 +146,8 @@ nginx-rtmp-module-master
 nginx-upload-progress-module-master
 
 ngx_devel_kit
+
+ngx_pagespeed
 
     cd /usr/local/src//nginx-master/nginx
     ./configure \
@@ -189,6 +204,7 @@ ngx_devel_kit
     --add-module=/usr/local/src/nginx-master/nginx-modules/memc-nginx-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-rtmp-module \
     --add-module=/usr/local/src/nginx-master/nginx-modules/nginx-upload-progress-module \
+    --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_pagespeed \
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit
     make
     make install
