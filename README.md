@@ -149,7 +149,7 @@ ngx_devel_kit
 
 ngx_pagespeed
 
-    cd /usr/local/src//nginx-master/nginx
+    cd /usr/local/src/nginx-master/nginx
     ./configure \
     --prefix=/etc/nginx \
     --conf-path=/etc/nginx/nginx.conf \
