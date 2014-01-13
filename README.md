@@ -27,8 +27,14 @@ This module compile latest nginx version and complementary modules
 
     cd /usr/local/src
     git clone http://luajit.org/git/luajit-2.0.git
+
+Update luajit
+
     cd luajit-2.0/
     git pull
+    
+Install
+
     make
     make install
     lua
