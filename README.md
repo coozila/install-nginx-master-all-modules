@@ -4,7 +4,7 @@ compile-nginx-master-all-modules
 This module compile latest nginx version and complementary modules
 
 
-## Installation
+## Installation dependence
 
     cd /usr/local/src
     yum -y groupinstall "Development Tools"
@@ -13,6 +13,8 @@ This module compile latest nginx version and complementary modules
     yum -y install cpio
     yum -y install expat-devel
     yum -y install gettext-devel
+    yum -y install libxslt
+    yum -y install libxslt-devel
     
 ## Download latest Pcre 8.34
 
@@ -150,7 +152,6 @@ Update ngx_pagespeed
 
     yum -y install openssl
     yum -y install openssl-devel
-    yum -y install libxslt
 
   
 ## Compile Nginx with :
