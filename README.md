@@ -34,6 +34,7 @@ Update luajit
     
 Install
 
+    cd /usr/local/src/luajit-2.0/
     make
     make install
     lua
