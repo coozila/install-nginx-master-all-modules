@@ -228,3 +228,6 @@ ngx_pagespeed
     --add-module=/usr/local/src/nginx-master/nginx-modules/ngx_devel_kit
     make
     make install
+
+## Add init file
+
