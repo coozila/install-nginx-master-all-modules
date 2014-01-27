@@ -157,6 +157,7 @@ ngx_devel_kit
 
 ngx_pagespeed
 
+    yum -y install openssl
     cd /usr/local/src/nginx-master/nginx
     ./configure \
     --prefix=/etc/nginx \
