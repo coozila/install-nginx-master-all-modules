@@ -16,6 +16,7 @@ This module compile latest nginx version and complementary modules on centos 6.x
     yum -y install libxslt
     yum -y install libxslt-devel
     yum -y install gd gd-devel
+    yum -y install perl-ExtUtils-Embed
     
 ## Download latest Pcre 8.34
 
