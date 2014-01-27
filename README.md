@@ -186,7 +186,7 @@ ngx_pagespeed
     --http-proxy-temp-path=/var/lib/nginx/proxy \
     --http-scgi-temp-path=/var/lib/nginx/scgi \
     --http-uwsgi-temp-path=/var/lib/nginx/uwsgi \
-    --with-pcre=/root/src/pcre-8.34 \
+    --with-pcre=/usr/local/src/pcre-8.34 \
     --with-debug \
     --with-http_addition_module \
     --with-http_dav_module \
