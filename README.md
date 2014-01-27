@@ -46,11 +46,11 @@ Install
 ##Install MaxMind C API
 Type the following commands to install MaxMind C API:
 
+    yum -y install zlib-devel
     cd /usr/local/src
     wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
     tar -zxvf GeoIP.tar.gz
     cd GeoIP-1.4.8
-    yum install zlib-devel
     ./configure
     make
     make install
