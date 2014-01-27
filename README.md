@@ -1,7 +1,7 @@
 compile-nginx-master-all-modules
 ================================
 
-This module compile latest nginx version and complementary modules
+This module compile latest nginx version and complementary modules on centos 6.x
 
 
 ## Installation dependence
@@ -15,6 +15,7 @@ This module compile latest nginx version and complementary modules
     yum -y install gettext-devel
     yum -y install libxslt
     yum -y install libxslt-devel
+    yum -y install gd gd-devel
     
 ## Download latest Pcre 8.34
 
