@@ -9,7 +9,10 @@ This module compile latest nginx version and complementary modules
     cd /usr/local/src
     yum -y groupinstall "Development Tools"
     yum -y install gcc gcc-c++ kernel-devel
-    yum -y install zlib-devel openssl-devel cpio expat-devel gettext-devel
+    yum -y install zlib-devel
+    yum -y install cpio
+    yum -y install expat-devel
+    yum -y install gettext-devel
     
 ## Download latest Pcre 8.34
 
@@ -145,7 +148,9 @@ Update ngx_pagespeed
     
 ## Install Openssl
 
-    yum -y install openssl openssl-devel
+    yum -y install openssl
+    yum -y install openssl-devel
+    yum -y install libxslt
 
   
 ## Compile Nginx with :
