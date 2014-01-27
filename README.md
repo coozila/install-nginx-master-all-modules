@@ -142,6 +142,10 @@ Update ngx_pagespeed
     git pull
     wget https://dl.google.com/dl/page-speed/psol/1.7.30.2.tar.gz
     tar -xzvf 1.7.30.2.tar.gz # expands to psol/
+    
+## Install Openssl
+
+    yum -y install openssl openssl-devel
 
   
 ## Compile Nginx with :
@@ -157,7 +161,6 @@ ngx_devel_kit
 
 ngx_pagespeed
 
-    yum -y install openssl
     cd /usr/local/src/nginx-master/nginx
     ./configure \
     --prefix=/etc/nginx \
