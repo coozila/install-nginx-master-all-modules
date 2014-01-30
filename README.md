@@ -17,6 +17,8 @@ This module compile latest nginx version and complementary modules on centos 6.x
     yum -y install libxslt-devel
     yum -y install gd gd-devel
     yum -y install perl-ExtUtils-Embed
+    yum -y install openssl
+    yum -y install openssl-devel
     
 ## Download latest Pcre 8.34
 
@@ -149,13 +151,7 @@ Update ngx_pagespeed
     git pull
     wget https://dl.google.com/dl/page-speed/psol/1.7.30.2.tar.gz
     tar -xzvf 1.7.30.2.tar.gz # expands to psol/
-    
-## Install Openssl
 
-    yum -y install openssl
-    yum -y install openssl-devel
-
-  
 ## Compile Nginx with :
 lua-nginx-module
 
