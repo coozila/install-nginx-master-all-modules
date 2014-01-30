@@ -263,6 +263,8 @@ ngx_pagespeed
     yum install -y php-firebird
     yum install -y php_database
 
+## Install drush
 
-    
+    pear channel-discover pear.drush.org
+    pear install drush/drush
 
