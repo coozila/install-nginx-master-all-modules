@@ -241,7 +241,6 @@ ngx_pagespeed
     yum install -y php55w-dba
     yum install -y php55w-devel
     yum install -y php55w-embedded
-    yum install -y php55w-interbase
     yum install -y php55w-enchant
     yum install -y php55w-gd
     yum install -y php55w-imap
