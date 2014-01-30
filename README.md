@@ -1,4 +1,4 @@
-compile-nginx-master-all-modules
+compile-nginx-master-all-modules Centos 6.x
 ================================
 
 This module compile latest nginx version and complementary modules on centos 6.x
