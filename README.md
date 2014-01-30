@@ -227,3 +227,42 @@ ngx_pagespeed
 
 ## Add init file
 
+## Install php55W
+
+    rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
+    yum install -y libfbclient
+    yum install -y libfbclient-devel
+    yum install -y php-embedded-devel
+    yum install -y php55w
+    yum install -y php55w-opcache
+    yum install -y php55w-common
+    yum install -y php55w-fpm
+    yum install -y php55w-cli
+    yum install -y php55w-dba
+    yum install -y php55w-devel
+    yum install -y php55w-embedded
+    yum install -y php55w-interbase
+    yum install -y php55w-enchant
+    yum install -y php55w-gd
+    yum install -y php55w-imap
+    yum install -y php55w-mbstring
+    yum install -y php55w-mcrypt
+    yum install -y php55w-mysql
+    yum install -y php55w-odbc
+    yum install -y php55w-pdo
+    yum install -y php55w-pecl-memcache
+    yum install -y php55w-pecl-xdebug
+    yum install -y php55w-process
+    yum install -y php55w-pspell 
+    yum install -y php55w-recode
+    yum install -y php55w-snmp
+    yum install -y php55w-soap
+    yum install -y php55w-tidy
+    yum install -y php55w-xml
+    yum install -y php55w-xmlrpc
+    yum install -y php-firebird
+    yum install -y php_database
+
+
+    
+
