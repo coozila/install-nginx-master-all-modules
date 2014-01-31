@@ -19,6 +19,7 @@ This module compile latest nginx version and complementary modules on centos 6.x
     yum -y install perl-ExtUtils-Embed
     yum -y install openssl
     yum -y install openssl-devel
+    yum -y install lua-devel
     
 ## Download latest Pcre 8.34
 
