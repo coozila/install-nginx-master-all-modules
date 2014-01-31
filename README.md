@@ -21,6 +21,7 @@ This module compile latest nginx version and complementary modules on centos 6.x
     yum -y install openssl-devel
     yum -y install lua-devel
     
+    
 ## Download latest Pcre 8.34
 
     cd /usr/local/src
@@ -260,8 +261,10 @@ ngx_pagespeed
     yum install -y php55w-tidy
     yum install -y php55w-xml
     yum install -y php55w-xmlrpc
+    yum install -y php55w-intl
     yum install -y php-firebird
     yum install -y php_database
+    yum install -y php55w-bcmath
 
 ## Install drush
 
