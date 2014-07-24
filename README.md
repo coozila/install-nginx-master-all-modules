@@ -275,3 +275,11 @@ ngx_pagespeed
     pear channel-discover pear.drush.org
     pear install drush/drush
 
+## Install memcached
+
+    yum install memcached
+    
+## Install mysql
+
+    yum install -y mysql
+    yum install -y mysql-server
