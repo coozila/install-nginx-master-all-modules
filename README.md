@@ -229,6 +229,10 @@ ngx_pagespeed
 
 ## Add init file
 
+    chkconfig nginx on
+    chmod a+x /etc/init.d/nginx
+    service nginx start
+
 ## Install php55W
 
     rpm -Uvh http://mirror.webtatic.com/yum/el6/latest.rpm
