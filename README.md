@@ -151,8 +151,8 @@ Update ngx_pagespeed
 
     cd /usr/local/src/nginx-master/nginx-modules/ngx_pagespeed
     git pull
-    wget https://dl.google.com/dl/page-speed/psol/1.7.30.4.tar.gz
-    tar -xzvf 1.7.30.4.tar.gz # expands to psol/
+    wget https://dl.google.com/dl/page-speed/psol/1.7.30.3.tar.gz
+    tar -xzvf 1.7.30.3.tar.gz # expands to psol/
 
 ## Compile Nginx with :
 lua-nginx-module
