@@ -42,7 +42,7 @@ Update luajit
 
     cd luajit-2.0/
     git pull
-    
+
 Install
 
     cd /usr/local/src/luajit-2.0/
