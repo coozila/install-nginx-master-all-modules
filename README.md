@@ -234,7 +234,7 @@ ngx_pagespeed
 
     chkconfig nginx on
     chmod a+x /etc/init.d/nginx
-    service nginx start
+    service nginx restart
 
 ## Install php55W
 
