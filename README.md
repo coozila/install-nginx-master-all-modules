@@ -79,6 +79,7 @@ Run ldconfig to activate configuration:
 
     mkdir /usr/local/src/nginx-master
     mkdir /usr/local/src/nginx-master/nginx-modules
+    mkdir -p /var/lib/nginx/{body,fastcgi}
     
 ## Git latest nginx-master
 
