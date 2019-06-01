@@ -25,7 +25,7 @@ This module compile latest nginx version and complementary modules on centos 6.x
 ## Download latest Pcre 8.34
 
     cd /usr/local/src
-    wget ftp://ftp.csx.cam.ac.uk/pub/software/programming/pcre/pcre-8.34.tar.gz
+    wget https://ftp.pcre.org/pub/pcre/pcre-8.34.tar.gz
     tar -xzvf pcre-8.34.tar.gz
     cd pcre-8.34/
     ./configure # /usr/local is the default so no need to prefix
@@ -59,9 +59,9 @@ Type the following commands to install MaxMind C API:
 
     yum -y install zlib-devel
     cd /usr/local/src
-    wget http://geolite.maxmind.com/download/geoip/api/c/GeoIP.tar.gz
-    tar -zxvf GeoIP.tar.gz
-    cd GeoIP-1.4.8
+    wget https://github.com/maxmind/geoip-api-c/releases/download/v1.6.12/GeoIP-1.6.12.tar.gz
+    tar -zxvf GeoIP-1.6.12.tar.gz
+    cd GeoIP-1.6.12 
     ./configure
     make
     make install
@@ -79,11 +79,14 @@ Run ldconfig to activate configuration:
 
     mkdir /usr/local/src/nginx-master
     mkdir /usr/local/src/nginx-master/nginx-modules
+    mkdir -p /var/lib/nginx/{body,fastcgi}
     
 ## Git latest nginx-master
 
     cd /usr/local/src/nginx-master
-    git clone --depth 1 https://github.com/nginx/nginx
+    wget  https://nginx.org/download/nginx-1.14.2.tar.gz
+      tar zxf nginx-1.14.2.tar.gz
+       mv nginx-1.14.2  nginx
     
 Update nginx-master
 
@@ -231,7 +234,7 @@ ngx_pagespeed
 
     chkconfig nginx on
     chmod a+x /etc/init.d/nginx
-    service nginx start
+    service nginx restart
 
 ## Install php55W
 
